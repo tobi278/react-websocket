@@ -1,24 +1,157 @@
-.App {
-  text-align: center;
+:root {
+    --main-block-color: #6DA797;
+    --secondary-block-color: #C6DED4;
+    --highlight-color: #FFD700;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+html, body {
+    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+a {
+    color: var(--main-block-color);
+    font-weight: bold;
 }
 
-.App-intro {
-  font-size: large;
+input {
+    font-size: larger;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+#wrapper {
+    height: auto;
+    min-height: 100vh;
+}
+
+#header {
+    display: flex;
+    flex-direction: row;
+}
+
+#user-preferences {
+    width: 100%;
+    text-align: right;
+    padding-top: 40px;
+    padding-right: 50px;
+}
+
+#navigation, #footer {
+    background-color: var(--main-block-color);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#footer {
+    width: 100%;
+    text-align: right;
+    height: 30px;
+    margin-top: -50px;
+}
+
+#navigation a, #footer a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: larger;
+    font-weight: normal;
+}
+
+#content {
+    padding: 50px;
+    margin-bottom: 2.5rem;
+}
+
+button {
+    border: none;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: larger;
+    font-weight: normal;
+    background-color: var(--main-block-color);
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #94b1b6;
+    color: grey;
+    cursor: not-allowed;
+}
+
+.button-link {
+    border: none;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: var(--main-block-color);
+    color: white;
+    cursor: pointer;
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+    vertical-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 1px solid var(--main-block-color);
+}
+
+@media (max-width: 600px) {
+    #header {
+        margin-left: 24px;
+    }
+
+    #content {
+        padding: 8px;
+    }
+
+    #user-preferences {
+        position: absolute;
+        padding: 0;
+        text-align: left;
+        top: 230px;
+        left: 300px;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+    }
+
+    #language-switch {
+        margin-right: 12px;
+    }
+}
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark h1 {
+    color: white;
+}
+
+.dark input {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.dark select {
+    background-color: darkslategrey;
+    color: white;
 }
